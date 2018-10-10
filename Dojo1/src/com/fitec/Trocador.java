@@ -16,9 +16,6 @@ public class Trocador
     {
         Troco troco = new Troco();
 
-        troco.setNumeroCedulas(4);
-        troco.setNumeroMoedas(5);
-
         return troco;
     }
 }

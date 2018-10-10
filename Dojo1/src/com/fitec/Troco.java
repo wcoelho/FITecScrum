@@ -10,42 +10,25 @@
 // **********************************************************************
 package com.fitec;
 
+import java.util.ArrayList;
+
 public class Troco
 {
-    private int numeroMoedas;
+    ArrayList<TrocoNotas> trocoNotas = new ArrayList<>();
+    ArrayList<TrocoMoedas> trocoMoedas = new ArrayList<>();
 
-    /**
-     * @return the numeroMoedas
-     */
-    public int getNumeroMoedas()
+    public void addTrocoMoeda(int quantidadeMoeda, double valorMoeda)
     {
-        return numeroMoedas;
+        TrocoMoedas trocoMoeda = new TrocoMoedas();
+        trocoMoeda.setQuantidadeMoeda(quantidadeMoeda);
+        trocoMoeda.setValorMoeda(valorMoeda);
     }
 
-    /**
-     * @param numeroMoedas the numeroMoedas to set
-     */
-    public void setNumeroMoedas(int numeroMoedas)
+    public void addTrocoNotas(int quantidadeMoeda, double valorMoeda)
     {
-        this.numeroMoedas = numeroMoedas;
-    }
-
-    private int numeroCedulas;
-
-    /**
-     * @return the numeroCedulas
-     */
-    public int getNumeroCedulas()
-    {
-        return numeroCedulas;
-    }
-
-    /**
-     * @param numeroCedulas the numeroCedulas to set
-     */
-    public void setNumeroCedulas(int numeroCedulas)
-    {
-        this.numeroCedulas = numeroCedulas;
+        TrocoNotas trocoNota = new TrocoNotas();
+        trocoNota.setQuantidadeNota(quantidadeMoeda);
+        trocoNota.setValorNota(valorMoeda);
     }
 
 }
